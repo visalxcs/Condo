@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELVARA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <a href="#" class="nav-logo">ÉLVARA</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#units">Residences</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#contact" class="nav-cta">Inquire</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-label">Luxury Condominiums · Est. 2025</div>
+      <h1 class="hero-title">Live<br><em>Above</em><br>Ordinary</h1>
+      <p class="hero-sub">An exclusive collection of 72 sky residences redefining urban luxury — where architectural
+        brilliance meets understated elegance.</p>
+      <div class="hero-actions">
+        <a href="#units" class="btn-primary">Explore Residences</a>
+        <a href="#contact" class="btn-ghost">Schedule a Tour</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item reveal">
+      <div class="stat-num" data-target="72">0</div>
+      <div class="stat-label">Exclusive Units</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <div class="stat-num">34<small style="font-size:24px">F</small></div>
+      <div class="stat-label">Floors High</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <div class="stat-num" data-target="18">0</div>
+      <div class="stat-label">Amenity Spaces</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <div class="stat-num">A+</div>
+      <div class="stat-label">Location Grade</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">Crafted for<br>Those Who Demand<br><em
+            style="font-style:italic; color:var(--gold)">More</em></h2>
+        <p>ÉLVARA was conceived as a testament to what is possible when architecture, design, and location converge
+          without compromise. Every decision — from the curvature of the façade to the weight of a door handle — was
+          made with a singular purpose.</p>
+        <p>Developed by Aurum Properties, winners of the International Architecture Award, ÉLVARA represents two decades
+          of experience distilled into a single, defining landmark.</p>
+        <a href="#contact" class="btn-primary" style="margin-top:16px">Download Brochure</a>
+      </div>
+      <div class="about-image-wrap reveal reveal-delay-1">
+        <img class="about-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+          alt="Luxury Interior">
+        <div class="about-image-accent"></div>
+        <div class="about-badge">
+          <span>2025</span>
+          <small>Award Winning</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNITS -->
+  <section class="units" id="units">
+    <div class="units-header reveal">
+      <div>
+        <div class="section-label">The Residences</div>
+        <h2 class="section-title">Choose Your<br><em style="font-style:italic; color:var(--gold)">Sanctuary</em></h2>
+      </div>
+      <p style="font-size:12px; color:var(--gray); max-width:260px; line-height:1.9;">Three distinct residence types,
+        each a world unto itself. Limited availability.</p>
+    </div>
+    <div class="units-grid">
+
+      <div class="unit-card reveal" onclick="openModal('premier')">
+        <img src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=800&q=80" alt="Premier Suite">
+        <div class="unit-overlay">
+          <div class="unit-type">Premier Suite</div>
+          <div class="unit-name">The Residence</div>
+          <div class="unit-price">From $485,000</div>
+          <div class="unit-specs">
+            <span>🛏 1–2 Bed</span>
+            <span>🚿 1–2 Bath</span>
+            <span>📐 720–950 sqft</span>
+          </div>
+          <a class="unit-cta">View Details →</a>
+        </div>
+      </div>
+
+      <div class="unit-card reveal reveal-delay-1" onclick="openModal('grand')">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" alt="Grand Suite">
+        <div class="unit-overlay">
+          <div class="unit-type">Grand Suite</div>
+          <div class="unit-name">The Prestige</div>
+          <div class="unit-price">From $780,000</div>
+          <div class="unit-specs">
+            <span>🛏 2–3 Bed</span>
+            <span>🚿 2–3 Bath</span>
+            <span>📐 1,200–1,600 sqft</span>
+          </div>
+          <a class="unit-cta">View Details →</a>
+        </div>
+      </div>
+
+      <div class="unit-card reveal reveal-delay-2" onclick="openModal('penthouse')">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Penthouse">
+        <div class="unit-overlay">
+          <div class="unit-type">Pinnacle Collection</div>
+          <div class="unit-name">The Penthouse</div>
+          <div class="unit-price">From $2,400,000</div>
+          <div class="unit-specs">
+            <span>🛏 3–4 Bed</span>
+            <span>🚿 3–4 Bath</span>
+            <span>📐 2,800–4,200 sqft</span>
+          </div>
+          <a class="unit-cta">View Details →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <div class="gallery">
+    <div class="gallery-track">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800&q=80" alt="Living Room">
+        <div class="gallery-item-label">Living Room</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Kitchen">
+        <div class="gallery-item-label">Kitchen</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80" alt="Bedroom">
+        <div class="gallery-item-label">Master Bedroom</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=800&q=80" alt="Bathroom">
+        <div class="gallery-item-label">Ensuite Bath</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1549638441-b787d2e11f14?w=800&q=80" alt="Terrace">
+        <div class="gallery-item-label">Private Terrace</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AMENITIES -->
+  <section class="amenities" id="amenities">
+    <div class="amenities-inner">
+      <div class="amenities-header reveal">
+        <div class="section-label">Building Features</div>
+        <h2 class="section-title">Every Luxury,<br><em style="font-style:italic; color:var(--gold)">Considered</em></h2>
+      </div>
+      <div class="amenities-grid">
+        <div class="amenity-item reveal">
+          <div class="amenity-icon">♨️</div>
+          <div class="amenity-name">Infinity Pool</div>
+          <div class="amenity-desc">Sky-level pool with panoramic city views and heated jacuzzi</div>
+        </div>
+        <div class="amenity-item reveal reveal-delay-1">
+          <div class="amenity-icon">🏋️</div>
+          <div class="amenity-name">Fitness Center</div>
+          <div class="amenity-desc">State-of-the-art gym with personal training suites and yoga studio</div>
+        </div>
+        <div class="amenity-item reveal reveal-delay-2">
+          <div class="amenity-icon">🌿</div>
+          <div class="amenity-name">Sky Garden</div>
+          <div class="amenity-desc">Sky Garden</div>
+        </div>
+        <div class="amenity-item reveal reveal-delay-3">
+          <div class="amenity-icon">🍽️</div>
+          <div class="amenity-name">Private Dining</div>
+          <div class="amenity-desc">Chef-curated dining experiences for residents and guests</div>
+        </div>
+        <div class="amenity-item reveal">
+          <div class="amenity-icon">🎭</div>
+          <div class="amenity-name">Screening Room</div>
+          <div class="amenity-desc">Private cinema with Dolby Atmos sound and velvet seating</div>
+        </div>
+        <div class="amenity-item reveal reveal-delay-1">
+          <div class="amenity-icon">🚗</div>
+          <div class="amenity-name">Valet & Garage</div>
+          <div class="amenity-desc">24/7 valet parking with EV charging for every residence</div>
+        </div>
+        <div class="amenity-item reveal reveal-delay-2">
+          <div class="amenity-icon">🛎️</div>
+          <div class="amenity-name">Concierge</div>
+          <div class="amenity-desc">Around-the-clock white-glove concierge and security service</div>
+        </div>
+        <div class="amenity-item reveal reveal-delay-3">
+          <div class="amenity-icon">🧖</div>
+          <div class="amenity-name">Spa & Wellness</div>
+          <div class="amenity-desc">Full-service spa with sauna, steam, and treatment rooms</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location" id="location">
+    <div class="location-inner">
+      <div class="reveal">
+        <div class="section-label">Prime Address</div>
+        <h2 class="section-title">At the Heart of<br><em style="font-style:italic; color:var(--gold)">Everything</em>
+        </h2>
+        <p style="font-size:13px; color:var(--gray); line-height:2; margin-bottom:30px;">Positioned in the most coveted
+          urban corridor, ÉLVARA places you moments from the city's finest dining, culture, and business districts.</p>
+        <div class="nearby-list">
+          <div class="nearby-item">
+            <span class="nearby-name">Financial District</span>
+            <span class="nearby-dist">3 min drive</span>
+          </div>
+          <div class="nearby-item">
+            <span class="nearby-name">International Airport</span>
+            <span class="nearby-dist">22 min drive</span>
+          </div>
+          <div class="nearby-item">
+            <span class="nearby-name">City Park & Waterfront</span>
+            <span class="nearby-dist">5 min walk</span>
+          </div>
+          <div class="nearby-item">
+            <span class="nearby-name">Shopping & Dining District</span>
+            <span class="nearby-dist">8 min walk</span>
+          </div>
+          <div class="nearby-item">
+            <span class="nearby-name">Metro Station</span>
+            <span class="nearby-dist">2 min walk</span>
+          </div>
+        </div>
+      </div>
+      <div class="location-map reveal reveal-delay-1">
+        <div class="map-placeholder">
+          <div class="map-pin"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="reveal">
+        <div class="section-label" style="justify-content:center">Begin Your Journey</div>
+        <h2 class="contact-title">Reserve Your<br><em style="font-style:italic; color:var(--gold)">Residence</em></h2>
+        <p class="contact-sub">Speak with our Private Sales team to explore available residences, arrange a private
+          viewing, or request the ÉLVARA brochure.</p>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="contact-form">
+          <input class="form-field" type="text" placeholder="First Name">
+          <input class="form-field" type="text" placeholder="Last Name">
+          <input class="form-field" type="email" placeholder="Email Address">
+          <input class="form-field" type="tel" placeholder="Phone Number">
+          <select class="form-field form-select full form-select">
+            <option value="" disabled selected>Residence of Interest</option>
+            <option>Premier Suite — From $485,000</option>
+            <option>Grand Suite — From $780,000</option>
+            <option>The Penthouse — From $2,400,000</option>
+            <option>Not Sure — Please Advise</option>
+          </select>
+          <textarea class="form-field full" rows="4" placeholder="Message (optional)" style="resize:none;"></textarea>
+        </div>
+        <button class="submit-btn" onclick="handleSubmit()">Request Private Consultation</button>
+        <div class="contact-info">
+          <div class="contact-detail">
+            <strong>Call Us</strong>
+            +1 (800) 555-ÉLVARA
+          </div>
+          <div class="contact-detail">
+            <strong>Email</strong>
+            sales@elvara.com
+          </div>
+          <div class="contact-detail">
+            <strong>Showroom</strong>
+            Open Mon–Sat, 10AM–7PM
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#" class="footer-logo">ÉLVARA</a>
+    <p class="footer-copy">© 2025 ÉLVARA Residences. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Fair Housing</a>
+    </div>
+  </footer>
+
+  <!-- UNIT MODAL -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">×</button>
+      <div class="modal-title" id="modal-title">The Residence</div>
+      <div class="modal-sub" id="modal-sub">Premier Suite</div>
+      <div class="modal-details" id="modal-details"></div>
+      <a href="#contact" class="btn-primary" onclick="closeModal()" style="display:block;text-align:center;">Inquire
+        About This Residence</a>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
